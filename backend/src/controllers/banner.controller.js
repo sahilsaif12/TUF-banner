@@ -32,6 +32,8 @@ const getBanner=asyncHandler(async(req,res)=>{
             new ApiResponse(200,"Banner fetched successfully",result[0])
             )
     } catch (error) {
+        console.log(error);
+        
         res.status(500).json(
             new ApiResponse(500,"server problem",error)
         )

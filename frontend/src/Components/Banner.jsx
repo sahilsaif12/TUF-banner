@@ -8,7 +8,8 @@ function Banner({ show, tagline, description, endTime, created_at, link }) {
     const calculateTimeLeft = () => {
         const now = new Date().getTime();
         const difference = targetDate - now;
-
+        console.log(difference);
+        
         let timeLeft = {};
         let percentages = {};
 
@@ -34,7 +35,7 @@ function Banner({ show, tagline, description, endTime, created_at, link }) {
             };
             console.log(daysLeft + " " + totalDays + " " + percentages.days);
         } else {
-            sethideBanner(true);
+            // sethideBanner(true);
             timeLeft = { days: 0, hours: 0, minutes: 0, seconds: 0 };
             percentages = { days: 0, hours: 0, minutes: 0, seconds: 0 };
         }
